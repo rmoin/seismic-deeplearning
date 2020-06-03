@@ -168,7 +168,7 @@ We use [YACS](https://github.com/rbgirshick/yacs) configuration library to manag
 - __yml config files__ - YAML configuration files under `configs/` are typically created one for each experiment. These are meant to be used for repeatable experiment runs and reproducible settings. Each configuration file only overrides the options that are changing in that experiment (e.g. options loaded from `defaults.py` during an experiment run will be overridden by arguments loaded from the yaml file). As an example, to use yml configuration file with the training script, run:
 
     ```
-    python train.py --cfg "configs/hrnet.yaml"
+    python train.py --cfg "configs/seresnet_unet.yaml"
     ```
 
 - __command line__ - Finally, options can be passed in through `options` argument, and those will override arguments loaded from the configuration file. We created CLIs for all our scripts (using Python Fire library), so you can pass these options via command-line arguments, like so:

@@ -2,7 +2,7 @@
 # Licensed under the MIT License.
 #
 # To Test:
-# python train.py TRAIN.END_EPOCH 1 TRAIN.SNAPSHOTS 1 --cfg "configs/hrnet.yaml" --debug
+# python train.py TRAIN.END_EPOCH 1 TRAIN.SNAPSHOTS 1 --cfg "configs/seresnet_unet.yaml" --debug
 #
 # /* spell-checker: disable */
 """Train models on Dutch F3 dataset
