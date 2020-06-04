@@ -8,7 +8,7 @@ import numpy as np
 from matplotlib import pyplot as plt
 
 
-def normalize(array):
+def normalize(array, MIN, MAX):
     """
     Normalizes a segmentation mask array to be in [0,1] range
     for use with PIL.Image
@@ -30,12 +30,12 @@ def mask_to_disk(mask, fname, n_classes, cmap_name="rainbow"):
     Image.fromarray(cmap(mask / n_classes, bytes=True)).save(fname)
 
 
-def image_to_disk(mask, fname, cmap_name="seismic"):
+def image_to_disk(image, fname, cmap_name="seismic"):
     """
     write segmentation image to disk using a particular colormap
     """
     cmap = plt.get_cmap(cmap_name)
-    Image.fromarray(cmap(normalize(mask), bytes=True)).save(fname)
+    Image.fromarray(cmap(normalize(image), bytes=True)).save(fname)
 
 
 def decode_segmap(label_mask, colormap_name="rainbow"):
